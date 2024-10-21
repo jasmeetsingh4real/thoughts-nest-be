@@ -1,4 +1,6 @@
-import express from "express";
+import * as express from "express";
+import { userRouter } from "./routes/user.routes";
+import { authRouter } from "./routes/auth.routes";
 const cors = require("cors");
 
 const bodyParser = require("body-parser");
@@ -22,5 +24,9 @@ app.use(
 app.use(express.json());
 
 //add your routes here
+
+app.use("/", authRouter);
+
+app.use("/user", userRouter);
 
 export default app;
