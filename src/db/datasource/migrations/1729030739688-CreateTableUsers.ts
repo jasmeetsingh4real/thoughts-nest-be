@@ -13,6 +13,7 @@ export class CreateTableUsers1729030739688 implements MigrationInterface {
             generationStrategy: "uuid",
             isGenerated: true,
             isUnique: true,
+            
           },
           {
             name: "name",
